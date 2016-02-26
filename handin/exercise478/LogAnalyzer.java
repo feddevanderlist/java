@@ -73,7 +73,7 @@ public class LogAnalyzer
      * geeft het drukste uur van de dag weer
      */public int busiestHour()
     {int busiest = 0;
-        int hour =0;
+        int hour = 0;
 
         for(int i = 0; i < hourCounts.length; i++){
             if (busiest <  hourCounts[i]){
@@ -82,12 +82,12 @@ public class LogAnalyzer
             }
         }
         return hour;
-    }
-
+    	
+     }
     /**
      * geeft het rustigste uur van de dag weer
      */
-    public int quietestHour()
+     public int quietestHour()
     {int quietest = 0;
         int hour =0;
 
@@ -106,7 +106,7 @@ public class LogAnalyzer
     {int busiest = 0;
         int hour =0;
 
-        for(int i = 0; i < hourCounts.length; i++){
+        for(int i = 0; i < hourCounts.length - 1; i++){
             if (busiest <  hourCounts[i] + hourCounts[i + 1]){
                 busiest = hourCounts[i]+ hourCounts[i + 1];
                 hour = i;
